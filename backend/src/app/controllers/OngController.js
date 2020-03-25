@@ -2,6 +2,11 @@ import crypto from 'crypto';
 import Ong from '../models/Ongs';
 
 class OngController {
+  async index(req, res) {
+    const ongs = await Ong.query().select('*');
+    return res.json(ongs);
+  }
+
   async store(req, res) {
     const { name, email, whatsapp, city, uf } = req.body;
     const id = crypto.randomBytes(10).toString('HEX');
