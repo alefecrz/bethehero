@@ -16,7 +16,7 @@ class Ong extends Model {
 
       properties: {
         id: { type: 'string' },
-        name: { type: 'string', pattern: '^[A-Za-z]+$' },
+        name: { type: 'string', pattern: '^[A-Za-z ]+$' },
         email: {
           type: 'string',
           pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$',
