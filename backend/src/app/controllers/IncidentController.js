@@ -3,7 +3,24 @@ import Incidents from '../models/Incidents';
 
 class IncidentsController {
   async index(req, res) {
-    const incidents = await Incidents.query().select('*');
+    const { page = 1 } = req.query;
+
+    const [incidentsCount] = await Incidents.query().count();
+
+    const incidents = await Incidents.query()
+      .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
+      .limit(5)
+      .offset((page - 1) * 5)
+      .select([
+        'incidents.*',
+        'ongs.name',
+        'ongs.whatsapp',
+        'ongs.city',
+        'ongs.uf',
+      ]);
+
+    res.header('X-Total-Count', incidentsCount.count);
+
     return res.json(incidents);
   }
 
