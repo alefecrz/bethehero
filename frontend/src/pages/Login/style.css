@@ -22,23 +22,6 @@
 .login-conteiner section.form form h1 {
   font-size: 32px;
   margin-bottom: 32px;
+  color: #31313f;
 }
 
-.login-conteiner section.form form a {
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
-  color: #41414d;
-  font-size: 18px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.2s;
-}
-
-.login-conteiner section.form form a:hover {
-  opacity: 0.8;
-}
-
-.login-conteiner section.form form svg {
-  margin-right: 8px;
-}
