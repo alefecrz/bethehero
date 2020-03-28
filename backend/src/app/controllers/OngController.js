@@ -9,7 +9,7 @@ class OngController {
 
   async store(req, res) {
     const { name, email, whatsapp, city, uf } = req.body;
-    const id = crypto.randomBytes(10).toString('HEX');
+    const id = crypto.randomBytes(4).toString('HEX');
 
     try {
       await Ong.query().insert({
