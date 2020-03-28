@@ -32,7 +32,7 @@ class Incident extends Model {
       properties: {
         title: { type: 'string' },
         description: { type: 'string' },
-        value: { type: 'number' },
+        value: { type: 'string' },
       },
     };
   }
