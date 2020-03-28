@@ -7,7 +7,7 @@ class SessionController {
     const ong = await Ong.query().where('id', id).select('name').first();
 
     if (!ong)
-      return res.stuts(400).json({ error: 'Ong does not found with ID.' });
+      return res.status(400).json({ error: 'Ong does not found with ID.' });
 
     return res.json(ong);
   }
