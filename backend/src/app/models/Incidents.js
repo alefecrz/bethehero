@@ -23,19 +23,6 @@ class Incident extends Model {
       },
     };
   }
-
-  static get jsonSchema() {
-    return {
-      type: 'object',
-      required: ['title', 'description', 'value'],
-
-      properties: {
-        title: { type: 'string' },
-        description: { type: 'string' },
-        value: { type: 'string' },
-      },
-    };
-  }
 }
 
 export default Incident;

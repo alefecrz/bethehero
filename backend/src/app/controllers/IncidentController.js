@@ -3,22 +3,18 @@ import Incidents from '../models/Incidents';
 class IncidentsController {
   async index(req, res) {
     const { page = 1 } = req.query;
-    const ong_id = req.headers.authorization;
 
-    if(!ong_id) {
-      return res.status(401).json({ error: "Operation not permitted."});
-    }
     const [incidentsCount] = await Incidents.query().count();
 
     const incidents = await Incidents.query()
       .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
       .limit(5)
       .offset((page - 1) * 5)
-      .where('ong_id', ong_id)
       .select([
         'incidents.*',
         'ongs.name',
         'ongs.whatsapp',
+        'ongs.email',
         'ongs.city',
         'ongs.uf',
       ]);
