@@ -3,7 +3,7 @@
 </h1>
 <div  align="center">
   <h3>
-    TheBeHero ajuda ONGs e Heróis a se encontrarem. <br />
+    BeTheHero ajuda ONGs e Heróis a se encontrarem. <br />
   </h3>
   <h4>As Ong postam casos e os Herois pegam e ajuda acontece.</h4>
 </div>
