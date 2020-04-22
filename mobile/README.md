@@ -18,5 +18,6 @@
     src="/assets/mobile/4.png" width="200px"/>
     <br>
 </div>
-<br />
-Feito com ♥ por Álefe Cruz :wave: [Entre em contato!](https://www.alefecruz.com.br/)
+
+
+Feito com ♥ por Álefe Cruz :wave: [Get in touch!](https://www.alefecruz.com.br/)
